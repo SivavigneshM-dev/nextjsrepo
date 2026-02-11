@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>SkillUp - Learn Today, Lead Tomorrow</title>
+  </head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <a href="#" class="logo">SkillUp</a>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#courses">Courses</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#" onclick="toggleMobileMenu()">Home</a>
+        <a href="#courses" onclick="toggleMobileMenu()">Courses</a>
+        <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Master the Skills of Tomorrow</h1>
+      <p>Web Development • Graphics Designing • AI Tools • Video Editing</p>
+      <a href="#courses" class="btn">Browse Courses</a>
+    </div>
+  </section>
+
+  <section id="courses" class="courses">
+    <div class="container">
+      <div class="section-title">
+        <h2>Popular Courses</h2>
+        <p>Choose from four in-demand fields and start your journey today.</p>
+      </div>
+      <div class="course-grid">
+        <div class="course-card">
+          <div class="course-icon">💻</div>
+          <h3>Web Development</h3>
+          <p>Master HTML, CSS, JavaScript, React, and Node.js. Build full-stack applications from scratch.</p>
+          <div class="course-meta">
+            <span>Beginner to Advanced</span>
+            <span>12 weeks</span>
+          </div>
+          <button class="register-btn" onclick="openModal('Web Development')">Register Now</button>
+        </div>
+        <div class="course-card">
+          <div class="course-icon">🎨</div>
+          <h3>Graphics Designing</h3>
+          <p>Learn Photoshop, Illustrator, Figma, and UI/UX principles. Create stunning visuals and prototypes.</p>
+          <div class="course-meta">
+            <span>All Levels</span>
+            <span>8 weeks</span>
+          </div>
+          <button class="register-btn" onclick="openModal('Graphics Designing')">Register Now</button>
+        </div>
+        <div class="course-card">
+          <div class="course-icon">🤖</div>
+          <h3>AI Tools</h3>
+          <p>ChatGPT, Midjourney, TensorFlow basics. Automate tasks and build AI-powered applications.</p>
+          <div class="course-meta">
+            <span>Intermediate</span>
+            <span>6 weeks</span>
+          </div>
+          <button class="register-btn" onclick="openModal('AI Tools')">Register Now</button>
+        </div>
+        <div class="course-card">
+          <div class="course-icon">🎬</div>
+          <h3>Video Editing</h3>
+          <p>Premiere Pro, After Effects, DaVinci Resolve. Edit, color grade, and add VFX to your videos.</p>
+          <div class="course-meta">
+            <span>Beginner to Advanced</span>
+            <span>10 weeks</span>
+          </div>
+          <button class="register-btn" onclick="openModal('Video Editing')">Register Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Need Help?</h2>
+      <p>Our advisors are here to guide you to the right course.</p>
+      <a href="mailto:admissions@skillup.com" class="contact-btn">Contact Admissions</a>
+    </div>
+  </section>
+
+  <div class="modal" id="registrationModal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal()">&times;</button>
+      <h2 id="modalTitle">Register for Course</h2>
+      
+      <div id="successMessage" style="display: none;" class="success-message"></div>
+      
+      <form id="registrationForm" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name" class="required">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe">
+          <div id="nameError" class="error-message"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="email" class="required">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="john@example.com">
+          <div id="emailError" class="error-message"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone" class="required">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
+          <div id="phoneError" class="error-message"></div>
+        </div>
+        
+        <input type="hidden" id="courseInput" name="course" value="">
+        
+        <button type="submit" class="submit-btn" id="submitBtn">Register</button>
+        <p style="font-size: 0.75rem; color: #6b7280; text-align: center; margin-top: 12px;">* Required fields</p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    let currentCourse = '';
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+
+    function openModal(courseTitle) {
+      currentCourse = courseTitle;
+      document.getElementById('modalTitle').textContent = `Register for ${courseTitle}`;
+      document.getElementById('courseInput').value = courseTitle;
+      document.getElementById('registrationModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      document.getElementById('registrationForm').reset();
+      document.getElementById('successMessage').style.display = 'none';
+      clearErrors();
+    }
+
+    function closeModal() {
+      document.getElementById('registrationModal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('registrationModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+
+    function clearErrors() {
+      document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+      document.querySelectorAll('.form-group input').forEach(el => {
+        el.classList.remove('error');
+      });
+    }
+
+    function validateForm(name, email, phone) {
+      let isValid = true;
+      clearErrors();
+
+      if (!name.trim()) {
+        document.getElementById('nameError').textContent = 'Name is required';
+        document.getElementById('name').classList.add('error');
+        isValid = false;
+      }
+
+      if (!email.trim()) {
+        document.getElementById('emailError').textContent = 'Email is required';
+        document.getElementById('email').classList.add('error');
+        isValid = false;
+      } else if (!/\S+@\S+\.\S+/.test(email)) {
+        document.getElementById('emailError').textContent = 'Email is invalid';
+        document.getElementById('email').classList.add('error');
+        isValid = false;
+      }
+
+      if (!phone.trim()) {
+        document.getElementById('phoneError').textContent = 'Phone is required';
+        document.getElementById('phone').classList.add('error');
+        isValid = false;
+      }
+
+      return isValid;
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const course = document.getElementById('courseInput').value;
+
+      if (!validateForm(name, email, phone)) {
+        return;
+      }
+
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+
+      setTimeout(() => {
+        console.log('Registration:', { name, email, phone, course });
+        
+        const successMsg = document.getElementById('successMessage');
+        successMsg.textContent = '✓ Registration successful! We\'ll contact you soon.';
+        successMsg.style.display = 'block';
+        
+        document.getElementById('registrationForm').reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Register';
+
+        setTimeout(() => {
+          closeModal();
+          successMsg.style.display = 'none';
+        }, 2000);
+      }, 1000);
+    }
+
+    document.querySelectorAll('.form-group input').forEach(input => {
+      input.addEventListener('input', function() {
+        this.classList.remove('error');
+        const errorDiv = document.getElementById(this.id + 'Error');
+        if (errorDiv) errorDiv.textContent = '';
+      });
+    });
+  </script>
+</body>
+</html>
