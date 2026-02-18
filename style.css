@@ -201,18 +201,6 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:4rem 2
 .inp-field:focus{border-color:var(--p);background:rgba(124,58,237,.05)}
 .inp-area{min-height:120px;resize:vertical}
 
-/* LIGHT MODE */
-body.light-mode{--dark:#ffffff;--dark2:#f8fafc;--card:#ffffff;--border:rgba(124,58,237,0.15);--text:#0f172a;--muted:#64748b}
-body.light-mode nav.s{background:rgba(255,255,255,.9)}
-body.light-mode .nl.open{background:rgba(255,255,255,.97)}
-body.light-mode .hcard,body.light-mode .mc,body.light-mode .fc,body.light-mode .tc,body.light-mode .pb,body.light-mode .fcard,body.light-mode .ic,body.light-mode .mc-card,body.light-mode .form-card{box-shadow:0 4px 20px rgba(0,0,0,0.05)}
-body.light-mode #cur{mix-blend-mode:normal;background:rgba(124,58,237,0.6)}
-
-/* Theme Toggle */
-#theme-toggle{background:none;border:none;color:var(--text);font-size:1.25rem;cursor:pointer;margin-right:1rem;padding:.25rem;transition:transform .3s,color .3s;display:flex;align-items:center;justify-content:center}
-#theme-toggle:hover{transform:rotate(15deg);color:var(--p)}
-@media(max-width:900px){#theme-toggle{margin-right:.5rem}}
-
 /* Partners */
 .part-grid{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;opacity:.7;margin-top:2rem;align-items:center}
 .part-logo{font-size:1.3rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;display:flex;align-items:center;gap:.5rem}

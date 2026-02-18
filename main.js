@@ -121,14 +121,3 @@ function doSignup(){
 if(document.getElementById('ei')) {
   document.getElementById('ei').addEventListener('keydown',e=>{if(e.key==='Enter')doSignup()});
 }
-
-// THEME TOGGLE
-const tgl=document.getElementById('theme-toggle');
-if(tgl){
-  const b=document.body,st=localStorage.getItem('theme');
-  if(st==='light'){b.classList.add('light-mode');tgl.textContent='☀️'}else{tgl.textContent='🌙'}
-  tgl.addEventListener('click',()=>{
-    b.classList.toggle('light-mode');const l=b.classList.contains('light-mode');
-    localStorage.setItem('theme',l?'light':'dark');tgl.textContent=l?'☀️':'🌙';
-  });
-}
