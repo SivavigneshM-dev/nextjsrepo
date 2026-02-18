@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Impact | Grapreneur</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader"><div class="ll">Grapreneur</div><div class="lb"><div class="lf"></div></div></div>
+<div id="cur"></div><div id="cur2"></div>
+
+<nav id="nav">
+  <div class="logo">Grapreneur</div>
+  <ul class="nl" id="nl">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="program.html">Program</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="stories.html">Stories</a></li>
+    <li><a href="roadmap.html">Roadmap</a></li>
+    <li><a href="apply.html">Apply</a></li>
+  </ul>
+  <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+  <a href="apply.html" class="ncta">Join Community</a>
+  <button class="hbg" onclick="document.getElementById('nl').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section id="impact" style="padding-top:8rem;min-height:100vh">
+  <div class="con">
+    <div class="iw">
+      <div>
+        <div class="sl">Our Reach</div>
+        <h2>Building India's Startup Ecosystem</h2>
+        <p class="sd" style="margin-bottom:1.5rem">Our founders are launching from cities across India, driving innovation and creating thousands of jobs nationwide.</p>
+        <div class="gs">
+          <div class="gst rev"><span class="gi">🏙️</span><span class="gt">Cities Active</span><span class="gn">28+</span></div>
+          <div class="gst rev"><span class="gi">🎓</span><span class="gt">Partner Universities</span><span class="gn">120+</span></div>
+          <div class="gst rev"><span class="gi">🌐</span><span class="gt">Countries Expanded To</span><span class="gn">6</span></div>
+          <div class="gst rev"><span class="gi">🏆</span><span class="gt">Awards Won</span><span class="gn">34</span></div>
+        </div>
+      </div>
+      <canvas id="gc"></canvas>
+    </div>
+  </div>
+</section>
+
+<section id="stats-2024" style="background:var(--dark2)">
+  <div class="con">
+    <div class="sl">Year in Review</div><h2>2024 Cohort Impact</h2>
+    <div class="mg" style="margin-top:3rem">
+      <div class="mc rev"><span class="mi">🎓</span><span class="mn">500+</span><span class="ml">Students Mentored</span></div>
+      <div class="mc rev"><span class="mi">🚀</span><span class="mn">150+</span><span class="ml">Startups Launched</span></div>
+      <div class="mc rev"><span class="mi">🤝</span><span class="mn">50+</span><span class="ml">Expert Mentors</span></div>
+      <div class="mc rev"><span class="mi">💰</span><span class="mn">₹2Cr+</span><span class="ml">Funding Raised</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="donate">
+  <div class="con">
+    <div class="don-box rev">
+      <div class="sl" style="justify-content:center">Get Involved</div><h2 style="margin-bottom:1rem">Support the Next Generation</h2>
+      <p class="sd" style="margin:0 auto 2rem">Your donation helps us provide free mentorship, training, and resources to aspiring entrepreneurs across India.</p>
+      <div class="br" style="justify-content:center">
+        <a href="#" class="bp">Support a Startup - Donate Now</a>
+        <a href="#" class="bs">Become a Mentor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="background:var(--dark)">
+  <div class="con">
+    <div class="sl">Community</div><h2>Impact in Action</h2>
+    <p class="sd">From hackathons in Mumbai to demo days in Bangalore, see our community building the future.</p>
+    <div class="gal-grid">
+      <img src="https://picsum.photos/seed/g1/400/400" class="gal-img rev" alt="Event">
+      <img src="https://picsum.photos/seed/g2/400/400" class="gal-img rev" alt="Event">
+      <img src="https://picsum.photos/seed/g3/400/400" class="gal-img rev" alt="Event">
+      <img src="https://picsum.photos/seed/g4/400/400" class="gal-img rev" alt="Event">
+      <img src="https://picsum.photos/seed/g5/400/400" class="gal-img rev" alt="Event">
+      <img src="https://picsum.photos/seed/g6/400/400" class="gal-img rev" alt="Event">
+      <img src="https://picsum.photos/seed/g7/400/400" class="gal-img rev" alt="Event">
+      <img src="https://picsum.photos/seed/g8/400/400" class="gal-img rev" alt="Event">
+    </div>
+    <div style="text-align:center;margin-top:2.5rem"><a href="apply.html" class="bp">Be Part of the Next Event</a></div>
+  </div>
+</section>
+
+<footer><div class="fb"><span>© 2026 Grapreneur. All rights reserved.</span></div></footer>
+<script src="main.js"></script>
+</body>
+</html>

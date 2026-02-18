@@ -1,241 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>SkillUp - Learn Today, Lead Tomorrow</title>
-  </head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Grapreneur | Empowering Future Entrepreneurs</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <nav class="navbar">
-    <div class="container">
-      <div class="nav-content">
-        <a href="#" class="logo">SkillUp</a>
-        <div class="nav-links">
-          <a href="#">Home</a>
-          <a href="#courses">Courses</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-      </div>
-      <div class="mobile-menu" id="mobileMenu">
-        <a href="#" onclick="toggleMobileMenu()">Home</a>
-        <a href="#courses" onclick="toggleMobileMenu()">Courses</a>
-        <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
-      </div>
-    </div>
-  </nav>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Master the Skills of Tomorrow</h1>
-      <p>Web Development • Graphics Designing • AI Tools • Video Editing</p>
-      <a href="#courses" class="btn">Browse Courses</a>
-    </div>
-  </section>
+<div id="loader"><div class="ll">Grapreneur</div><div class="lb"><div class="lf"></div></div></div>
+<div id="cur"></div><div id="cur2"></div>
 
-  <section id="courses" class="courses">
-    <div class="container">
-      <div class="section-title">
-        <h2>Popular Courses</h2>
-        <p>Choose from four in-demand fields and start your journey today.</p>
+<div id="banner"><span class="bb">🎉 New</span>Applications Open for Cohort 2026 — Enroll Free Now!</div>
+
+<nav id="nav">
+  <div class="logo">Grapreneur</div>
+  <ul class="nl" id="nl">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="program.html">Program</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="stories.html">Stories</a></li>
+    <li><a href="roadmap.html">Roadmap</a></li>
+    <li><a href="apply.html">Apply</a></li>
+  </ul>
+  <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+  <a href="apply.html" class="ncta">Join Community</a>
+  <button class="hbg" onclick="document.getElementById('nl').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section id="hero">
+  <canvas id="hc"></canvas>
+  <div class="ho"></div>
+  <div class="hw">
+    <div class="hl">
+      <div class="htag"><span class="hd"></span>India's #1 Student Startup Program</div>
+      <h1>Empowering Future Entrepreneurs</h1>
+      <p class="hsub">Grapreneur helps students become future-ready entrepreneurs by offering guidance, resources, and connections that enable them to build lasting businesses.</p>
+      <div class="br">
+        <a href="apply.html" class="bp">Enroll now for Free</a>
+        <a href="program.html" class="bs"><span class="pl">▶</span>Watch Video</a>
       </div>
-      <div class="course-grid">
-        <div class="course-card">
-          <div class="course-icon">💻</div>
-          <h3>Web Development</h3>
-          <p>Master HTML, CSS, JavaScript, React, and Node.js. Build full-stack applications from scratch.</p>
-          <div class="course-meta">
-            <span>Beginner to Advanced</span>
-            <span>12 weeks</span>
-          </div>
-          <button class="register-btn" onclick="openModal('Web Development')">Register Now</button>
-        </div>
-        <div class="course-card">
-          <div class="course-icon">🎨</div>
-          <h3>Graphics Designing</h3>
-          <p>Learn Photoshop, Illustrator, Figma, and UI/UX principles. Create stunning visuals and prototypes.</p>
-          <div class="course-meta">
-            <span>All Levels</span>
-            <span>8 weeks</span>
-          </div>
-          <button class="register-btn" onclick="openModal('Graphics Designing')">Register Now</button>
-        </div>
-        <div class="course-card">
-          <div class="course-icon">🤖</div>
-          <h3>AI Tools</h3>
-          <p>ChatGPT, Midjourney, TensorFlow basics. Automate tasks and build AI-powered applications.</p>
-          <div class="course-meta">
-            <span>Intermediate</span>
-            <span>6 weeks</span>
-          </div>
-          <button class="register-btn" onclick="openModal('AI Tools')">Register Now</button>
-        </div>
-        <div class="course-card">
-          <div class="course-icon">🎬</div>
-          <h3>Video Editing</h3>
-          <p>Premiere Pro, After Effects, DaVinci Resolve. Edit, color grade, and add VFX to your videos.</p>
-          <div class="course-meta">
-            <span>Beginner to Advanced</span>
-            <span>10 weeks</span>
-          </div>
-          <button class="register-btn" onclick="openModal('Video Editing')">Register Now</button>
-        </div>
+      <div class="hs">
+        <div class="hst"><div class="hsn" id="hn1">0+</div><div class="hsl">Grads</div></div>
+        <div class="hdv"></div>
+        <div class="hst"><div class="hsn" id="hn2">$0M+</div><div class="hsl">Raised</div></div>
+        <div class="hdv"></div>
+        <div class="hst"><div class="hsn" id="hn3">0%</div><div class="hsl">Success</div></div>
       </div>
     </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Need Help?</h2>
-      <p>Our advisors are here to guide you to the right course.</p>
-      <a href="mailto:admissions@skillup.com" class="contact-btn">Contact Admissions</a>
-    </div>
-  </section>
-
-  <div class="modal" id="registrationModal">
-    <div class="modal-content">
-      <button class="close-btn" onclick="closeModal()">&times;</button>
-      <h2 id="modalTitle">Register for Course</h2>
-      
-      <div id="successMessage" style="display: none;" class="success-message"></div>
-      
-      <form id="registrationForm" onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <label for="name" class="required">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="John Doe">
-          <div id="nameError" class="error-message"></div>
+    <div class="hr2">
+      <div class="hcard rev">
+        <div class="hct">
+          <div class="hci" style="background:linear-gradient(135deg,rgba(124,58,237,.25),rgba(168,85,247,.15))">🚀</div>
+          <div><div class="hctt">Startups Launched</div><div class="hcv">This cohort</div></div>
+          <div style="margin-left:auto;font-weight:800;color:#a78bfa;font-size:1.2rem">150+</div>
         </div>
-        
-        <div class="form-group">
-          <label for="email" class="required">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="john@example.com">
-          <div id="emailError" class="error-message"></div>
+        <div class="hcbar"><div class="hcf" style="width:85%;background:linear-gradient(90deg,#7c3aed,#a78bfa)"></div></div>
+      </div>
+      <div class="hcard rev">
+        <div class="hct">
+          <div class="hci" style="background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(251,191,36,.1))">💰</div>
+          <div><div class="hctt">Funding Raised</div><div class="hcv">Equity-free grants</div></div>
+          <div style="margin-left:auto;font-weight:800;color:#f59e0b;font-size:1.2rem">$25M</div>
         </div>
-        
-        <div class="form-group">
-          <label for="phone" class="required">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
-          <div id="phoneError" class="error-message"></div>
+        <div class="hcbar"><div class="hcf" style="width:72%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div></div>
+      </div>
+      <div class="hcard rev">
+        <div class="hct">
+          <div class="hci" style="background:linear-gradient(135deg,rgba(16,185,129,.2),rgba(52,211,153,.1))">🌍</div>
+          <div><div class="hctt">Community Members</div><div class="hcv">And growing fast</div></div>
+          <div style="margin-left:auto;font-weight:800;color:#10b981;font-size:1.2rem">5,000+</div>
         </div>
-        
-        <input type="hidden" id="courseInput" name="course" value="">
-        
-        <button type="submit" class="submit-btn" id="submitBtn">Register</button>
-        <p style="font-size: 0.75rem; color: #6b7280; text-align: center; margin-top: 12px;">* Required fields</p>
-      </form>
+        <div class="hcbar"><div class="hcf" style="width:95%;background:linear-gradient(90deg,#10b981,#34d399)"></div></div>
+      </div>
+      <div class="fbadge">
+        <div class="fbn">$2M 🎉</div>
+        <div class="fbt">Sarah just raised seed!</div>
+      </div>
     </div>
   </div>
+</section>
 
-  <script>
-    let currentCourse = '';
+<div id="ticker">
+  <div class="tw">
+    <span class="ti">🚀 <span class="tn">150+</span> Startups Launched</span><span class="ts">◆</span>
+    <span class="ti">💼 <span class="tn">1,200+</span> Jobs Created</span><span class="ts">◆</span>
+    <span class="ti">💰 <span class="tn">$25M</span> Funding Raised</span><span class="ts">◆</span>
+    <span class="ti">🌍 <span class="tn">5,000+</span> Community Members</span><span class="ts">◆</span>
+    <span class="ti">🎓 <span class="tn">120+</span> Partner Universities</span><span class="ts">◆</span>
+    <span class="ti">🏙️ <span class="tn">28+</span> Cities Active</span><span class="ts">◆</span>
+    <span class="ti">🏆 <span class="tn">96%</span> Success Rate</span><span class="ts">◆</span>
+    <span class="ti">🚀 <span class="tn">150+</span> Startups Launched</span><span class="ts">◆</span>
+    <span class="ti">💼 <span class="tn">1,200+</span> Jobs Created</span><span class="ts">◆</span>
+    <span class="ti">💰 <span class="tn">$25M</span> Funding Raised</span><span class="ts">◆</span>
+    <span class="ti">🌍 <span class="tn">5,000+</span> Community Members</span><span class="ts">◆</span>
+    <span class="ti">🎓 <span class="tn">120+</span> Partner Universities</span><span class="ts">◆</span>
+    <span class="ti">🏙️ <span class="tn">28+</span> Cities Active</span><span class="ts">◆</span>
+    <span class="ti">🏆 <span class="tn">96%</span> Success Rate</span><span class="ts">◆</span>
+  </div>
+</div>
 
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('active');
-    }
+<section id="metrics">
+  <div class="con">
+    <div style="text-align:center;margin-bottom:3rem"><div class="sl" style="justify-content:center">Our Impact</div><h2>Numbers That Speak</h2></div>
+    <div class="mg">
+      <div class="mc rev"><span class="mi">🚀</span><span class="mn" data-t="150" data-s="+">0</span><span class="ml">Startups Launched</span></div>
+      <div class="mc rev"><span class="mi">💼</span><span class="mn" data-t="1200" data-s="+">0</span><span class="ml">Jobs Created</span></div>
+      <div class="mc rev"><span class="mi">💰</span><span class="mn">$25M</span><span class="ml">Funding Raised</span></div>
+      <div class="mc rev"><span class="mi">🌍</span><span class="mn" data-t="5000" data-s="+">0</span><span class="ml">Community Members</span></div>
+    </div>
+  </div>
+</section>
 
-    function openModal(courseTitle) {
-      currentCourse = courseTitle;
-      document.getElementById('modalTitle').textContent = `Register for ${courseTitle}`;
-      document.getElementById('courseInput').value = courseTitle;
-      document.getElementById('registrationModal').classList.add('active');
-      document.body.style.overflow = 'hidden';
-      
-      document.getElementById('registrationForm').reset();
-      document.getElementById('successMessage').style.display = 'none';
-      clearErrors();
-    }
+<section id="resources" style="background:var(--dark)">
+  <div class="con">
+    <div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:3rem">
+      <div><div class="sl">Resources</div><h2>Recommended Reading</h2></div>
+      <a href="#" class="bs">View All Articles</a>
+    </div>
+    <div class="g-3">
+      <div class="ic rev">
+        <img src="https://picsum.photos/seed/r1/400/250" class="ic-img" alt="Blog">
+        <div class="ic-con">
+          <div class="ic-tag">Guide</div>
+          <div class="ic-ti">The Student's Guide to Validating Ideas Cheaply</div>
+          <p class="ic-desc">You don't need money to test if people want your product. Here are 5 ways to validate for free.</p>
+          <a href="#" class="ic-link">Read Article →</a>
+        </div>
+      </div>
+      <div class="ic rev">
+        <img src="https://picsum.photos/seed/r2/400/250" class="ic-img" alt="Blog">
+        <div class="ic-con">
+          <div class="ic-tag">Interview</div>
+          <div class="ic-ti">How to Balance College and a Startup</div>
+          <p class="ic-desc">We interviewed 20 student founders on how they managed attendance, exams, and fundraising.</p>
+          <a href="#" class="ic-link">Read Article →</a>
+        </div>
+      </div>
+      <div class="ic rev">
+        <img src="https://picsum.photos/seed/r3/400/250" class="ic-img" alt="Blog">
+        <div class="ic-con">
+          <div class="ic-tag">Funding</div>
+          <div class="ic-ti">Understanding Term Sheets: A Primer</div>
+          <p class="ic-desc">Don't sign anything until you understand these 3 key clauses in early-stage investment deals.</p>
+          <a href="#" class="ic-link">Read Article →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    function closeModal() {
-      document.getElementById('registrationModal').classList.remove('active');
-      document.body.style.overflow = 'auto';
-    }
+<footer>
+  <div class="fg2">
+    <div><div class="flog">Grapreneur</div><p class="ftag2">Empowering the next generation of entrepreneurs to build distinct, sustainable, and impactful businesses across India and beyond.</p></div>
+    <div><div class="fh">Quick Links</div><ul class="ful"><li><a href="program.html">Our Program</a></li><li><a href="stories.html">Success Stories</a></li><li><a href="#">Meet the Team</a></li><li><a href="#">Donate</a></li></ul></div>
+    <div><div class="fh">Resources</div><ul class="ful"><li><a href="#">Student Portal</a></li><li><a href="#">Volunteer</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
+    <div><div class="fh">Contact Us</div><div class="fco"><div>📍 12/1 VV layout, Dr. Rajendraprasad Road,<br>Udumalpet – 642126</div><div>📞 8270661299</div><div>✉️ contact@grapreneur.com</div><div>✉️ support@grapreneur.com</div></div></div>
+  </div>
+  <div class="fb"><span>© 2026 Grapreneur. All rights reserved.</span><span>Made with ❤️ for Student Entrepreneurs in India</span></div>
+</footer>
 
-    window.onclick = function(event) {
-      const modal = document.getElementById('registrationModal');
-      if (event.target === modal) {
-        closeModal();
-      }
-    }
-
-    function clearErrors() {
-      document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
-      document.querySelectorAll('.form-group input').forEach(el => {
-        el.classList.remove('error');
-      });
-    }
-
-    function validateForm(name, email, phone) {
-      let isValid = true;
-      clearErrors();
-
-      if (!name.trim()) {
-        document.getElementById('nameError').textContent = 'Name is required';
-        document.getElementById('name').classList.add('error');
-        isValid = false;
-      }
-
-      if (!email.trim()) {
-        document.getElementById('emailError').textContent = 'Email is required';
-        document.getElementById('email').classList.add('error');
-        isValid = false;
-      } else if (!/\S+@\S+\.\S+/.test(email)) {
-        document.getElementById('emailError').textContent = 'Email is invalid';
-        document.getElementById('email').classList.add('error');
-        isValid = false;
-      }
-
-      if (!phone.trim()) {
-        document.getElementById('phoneError').textContent = 'Phone is required';
-        document.getElementById('phone').classList.add('error');
-        isValid = false;
-      }
-
-      return isValid;
-    }
-
-    function handleSubmit(event) {
-      event.preventDefault();
-      
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const course = document.getElementById('courseInput').value;
-
-      if (!validateForm(name, email, phone)) {
-        return;
-      }
-
-      const submitBtn = document.getElementById('submitBtn');
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Submitting...';
-
-      setTimeout(() => {
-        console.log('Registration:', { name, email, phone, course });
-        
-        const successMsg = document.getElementById('successMessage');
-        successMsg.textContent = '✓ Registration successful! We\'ll contact you soon.';
-        successMsg.style.display = 'block';
-        
-        document.getElementById('registrationForm').reset();
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Register';
-
-        setTimeout(() => {
-          closeModal();
-          successMsg.style.display = 'none';
-        }, 2000);
-      }, 1000);
-    }
-
-    document.querySelectorAll('.form-group input').forEach(input => {
-      input.addEventListener('input', function() {
-        this.classList.remove('error');
-        const errorDiv = document.getElementById(this.id + 'Error');
-        if (errorDiv) errorDiv.textContent = '';
-      });
-    });
-  </script>
+<script src="main.js"></script>
 </body>
 </html>

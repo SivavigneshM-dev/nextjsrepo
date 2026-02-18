@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Apply | Grapreneur</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader"><div class="ll">Grapreneur</div><div class="lb"><div class="lf"></div></div></div>
+<div id="cur"></div><div id="cur2"></div>
+
+<nav id="nav">
+  <div class="logo">Grapreneur</div>
+  <ul class="nl" id="nl">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="program.html">Program</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="stories.html">Stories</a></li>
+    <li><a href="roadmap.html">Roadmap</a></li>
+    <li><a href="apply.html">Apply</a></li>
+  </ul>
+  <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+  <a href="apply.html" class="ncta">Join Community</a>
+  <button class="hbg" onclick="document.getElementById('nl').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section id="cta" style="padding-top:8rem;min-height:100vh;display:flex;align-items:center">
+  <div class="con"><div class="ci">
+    <div class="sl" style="justify-content:center">Apply Now — It's Free</div>
+    <h2>Ready to Build Your Dream Startup?</h2>
+    <p>Join 5,000+ students who've taken the first step. Applications for Cohort 2026 are open. No fees, no equity, no excuses.</p>
+    <div class="fc2">
+      <div class="fcard rev"><div class="fci">🎓</div><div class="fct">Free Program</div><div class="fcv">₹0</div></div>
+      <div class="fcard rev"><div class="fci">💎</div><div class="fct">Max Funding</div><div class="fcv">$50K</div></div>
+      <div class="fcard rev"><div class="fci">📅</div><div class="fct">Duration</div><div class="fcv">12 Wks</div></div>
+    </div>
+    <div class="ef">
+      <input class="ei" id="ei" type="email" placeholder="Enter your college email..."/>
+      <button class="bp" onclick="doSignup()" id="eb" style="white-space:nowrap;cursor:none">Get Started →</button>
+    </div>
+    <p class="en">🔒 No spam, ever. Unsubscribe anytime.</p>
+  </div></div>
+</section>
+
+<footer><div class="fb"><span>© 2026 Grapreneur. All rights reserved.</span></div></footer>
+<script src="main.js"></script>
+</body>
+</html>
