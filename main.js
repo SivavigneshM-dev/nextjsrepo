@@ -121,3 +121,10 @@ function doSignup(){
 if(document.getElementById('ei')) {
   document.getElementById('ei').addEventListener('keydown',e=>{if(e.key==='Enter')doSignup()});
 }
+
+// SCROLL TO TOP
+const stb=document.createElement('button');stb.innerHTML='↑';
+Object.assign(stb.style,{position:'fixed',bottom:'30px',left:'30px',width:'50px',height:'50px',background:'#7c3aed',color:'#fff',border:0,borderRadius:'50%',fontSize:'24px',cursor:'pointer',zIndex:999,opacity:0,transition:'opacity .3s',pointerEvents:'none',boxShadow:'0 10px 25px rgba(124,58,237,.4)'});
+document.body.appendChild(stb);
+window.addEventListener('scroll',()=>Object.assign(stb.style,{opacity:scrollY>300?1:0,pointerEvents:scrollY>300?'auto':'none'}));
+stb.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
