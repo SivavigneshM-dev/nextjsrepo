@@ -1,281 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Grapreneur | Empowering Future Entrepreneurs</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Grapreneur | Empowering Future Entrepreneurs</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div id="loader"><div class="ll">Grapreneur</div><div class="lb"><div class="lf"></div></div></div>
-<div id="cur"></div><div id="cur2"></div>
-
-<div id="banner"><span class="bb">🎉 New</span>Applications Open for Cohort 2026 — Enroll Free Now!</div>
-
-<nav id="nav">
-  <div class="logo">Grapreneur</div>
-  <ul class="nl" id="nl">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="program.html">Program</a></li>
-    <li><a href="impact.html">Impact</a></li>
-    <li><a href="stories.html">Stories</a></li>
-    <li><a href="roadmap.html">Roadmap</a></li>
-    <li><a href="apply.html">Apply</a></li>
-  </ul>
-  <a href="apply.html" class="ncta">Join Community</a>
-  <button class="hbg" onclick="document.getElementById('nl').classList.toggle('open')">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<section id="hero">
-  <canvas id="hc"></canvas>
-  <div class="ho"></div>
-  <div class="hw">
-    <div class="hl">
-      <div class="htag"><span class="hd"></span>India's #1 Student Startup Program</div>
-      <h1>Empowering Future Entrepreneurs</h1>
-      <p class="hsub">Grapreneur helps students become future-ready entrepreneurs by offering guidance, resources, and connections that enable them to build lasting businesses.</p>
-      <div class="br">
-        <a href="apply.html" class="bp">Enroll now for Free</a>
-        <a href="program.html" class="bs"><span class="pl">▶</span>Watch Video</a>
-      </div>
-      <div class="hs">
-        <div class="hst"><div class="hsn" id="hn1">0+</div><div class="hsl">Grads</div></div>
-        <div class="hdv"></div>
-        <div class="hst"><div class="hsn" id="hn2">$0M+</div><div class="hsl">Raised</div></div>
-        <div class="hdv"></div>
-        <div class="hst"><div class="hsn" id="hn3">0%</div><div class="hsl">Success</div></div>
-      </div>
+  <div id="loader">
+    <div class="ll">Grapreneur</div>
+    <div class="lb">
+      <div class="lf"></div>
     </div>
-    <div class="hr2">
-      <div class="hcard rev">
-        <div class="hct">
-          <div class="hci" style="background:linear-gradient(135deg,rgba(124,58,237,.25),rgba(168,85,247,.15))">🚀</div>
-          <div><div class="hctt">Startups Launched</div><div class="hcv">This cohort</div></div>
-          <div style="margin-left:auto;font-weight:800;color:#a78bfa;font-size:1.2rem">150+</div>
+  </div>
+  <div id="cur"></div>
+  <div id="cur2"></div>
+
+  <div id="banner"><span class="bb">🎉 New</span>Applications Open for Cohort 2026 — Enroll Free Now!</div>
+
+  <nav id="nav">
+    <div class="logo">Grapreneur</div>
+    <ul class="nl" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="program.html">Program</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="roadmap.html">Roadmap</a></li>
+    </ul>
+    <a href="join-community.html" class="ncta">Join Community</a>
+    <button class="hbg" onclick="document.getElementById('nl').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section id="hero">
+    <canvas id="hc"></canvas>
+    <div class="ho"></div>
+    <div class="hw">
+      <div class="hl">
+        <div class="htag"><span class="hd"></span>India's #1 Student Startup Program</div>
+        <h1>Empowering Future Entrepreneurs</h1>
+        <p class="hsub">Grapreneur helps students become future-ready entrepreneurs by offering guidance, resources, and
+          connections that enable them to build lasting businesses.</p>
+        <div class="br">
+          <a href="student-application.html" class="bp">Enroll now for Free</a>
+          <a href="program.html" class="bs"><span class="pl">▶</span>Watch Video</a>
         </div>
-        <div class="hcbar"><div class="hcf" style="width:85%;background:linear-gradient(90deg,#7c3aed,#a78bfa)"></div></div>
-      </div>
-      <div class="hcard rev">
-        <div class="hct">
-          <div class="hci" style="background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(251,191,36,.1))">💰</div>
-          <div><div class="hctt">Funding Raised</div><div class="hcv">Equity-free grants</div></div>
-          <div style="margin-left:auto;font-weight:800;color:#f59e0b;font-size:1.2rem">$25M</div>
-        </div>
-        <div class="hcbar"><div class="hcf" style="width:72%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div></div>
-      </div>
-      <div class="hcard rev">
-        <div class="hct">
-          <div class="hci" style="background:linear-gradient(135deg,rgba(16,185,129,.2),rgba(52,211,153,.1))">🌍</div>
-          <div><div class="hctt">Community Members</div><div class="hcv">And growing fast</div></div>
-          <div style="margin-left:auto;font-weight:800;color:#10b981;font-size:1.2rem">5,000+</div>
-        </div>
-        <div class="hcbar"><div class="hcf" style="width:95%;background:linear-gradient(90deg,#10b981,#34d399)"></div></div>
-      </div>
-      <div class="fbadge">
-        <div class="fbn">$2M 🎉</div>
-        <div class="fbt">Sarah just raised seed!</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div id="ticker">
-  <div class="tw">
-    <span class="ti">🚀 <span class="tn">150+</span> Startups Launched</span><span class="ts">◆</span>
-    <span class="ti">💼 <span class="tn">1,200+</span> Jobs Created</span><span class="ts">◆</span>
-    <span class="ti">💰 <span class="tn">$25M</span> Funding Raised</span><span class="ts">◆</span>
-    <span class="ti">🌍 <span class="tn">5,000+</span> Community Members</span><span class="ts">◆</span>
-    <span class="ti">🎓 <span class="tn">120+</span> Partner Universities</span><span class="ts">◆</span>
-    <span class="ti">🏙️ <span class="tn">28+</span> Cities Active</span><span class="ts">◆</span>
-    <span class="ti">🏆 <span class="tn">96%</span> Success Rate</span><span class="ts">◆</span>
-    <span class="ti">🚀 <span class="tn">150+</span> Startups Launched</span><span class="ts">◆</span>
-    <span class="ti">💼 <span class="tn">1,200+</span> Jobs Created</span><span class="ts">◆</span>
-    <span class="ti">💰 <span class="tn">$25M</span> Funding Raised</span><span class="ts">◆</span>
-    <span class="ti">🌍 <span class="tn">5,000+</span> Community Members</span><span class="ts">◆</span>
-    <span class="ti">🎓 <span class="tn">120+</span> Partner Universities</span><span class="ts">◆</span>
-    <span class="ti">🏙️ <span class="tn">28+</span> Cities Active</span><span class="ts">◆</span>
-    <span class="ti">🏆 <span class="tn">96%</span> Success Rate</span><span class="ts">◆</span>
-  </div>
-</div>
-
-<section id="metrics">
-  <div class="con">
-    <div style="text-align:center;margin-bottom:3rem"><div class="sl" style="justify-content:center">Our Impact</div><h2>Numbers That Speak</h2></div>
-    <div class="mg">
-      <div class="mc rev"><span class="mi">🚀</span><span class="mn" data-t="150" data-s="+">0</span><span class="ml">Startups Launched</span></div>
-      <div class="mc rev"><span class="mi">💼</span><span class="mn" data-t="1200" data-s="+">0</span><span class="ml">Jobs Created</span></div>
-      <div class="mc rev"><span class="mi">💰</span><span class="mn">$25M</span><span class="ml">Funding Raised</span></div>
-      <div class="mc rev"><span class="mi">🌍</span><span class="mn" data-t="5000" data-s="+">0</span><span class="ml">Community Members</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="partners" style="background:var(--dark2);padding:3rem 2rem">
-  <div class="con" style="text-align:center">
-    <div class="sl" style="justify-content:center">Our Ecosystem</div><h2 style="font-size:1.5rem;margin-bottom:2rem">Supported By Industry Leaders</h2>
-    <div class="part-grid">
-      <div class="part-logo"><span>⚡</span>TechCorp</div>
-      <div class="part-logo"><span>🚀</span>InnovateFund</div>
-      <div class="part-logo"><span>🌐</span>StartupHub</div>
-      <div class="part-logo"><span>🎓</span>EduTech</div>
-    </div>
-  </div>
-</section>
-
-<section id="features" style="background:var(--dark)">
-  <div class="con">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-bottom:3rem">
-      <div><div class="sl">What We Offer</div><h2>Everything You Need to Succeed</h2><p class="sd" style="margin-bottom:0">Our comprehensive program bridges the gap between idea and impact — completely free for students across India.</p></div>
-      <div style="display:flex;align-items:center;justify-content:flex-end"><a href="program.html" class="bp">View Program Details →</a></div>
-    </div>
-    <div class="fg">
-      <div class="fc rev"><div class="fi">📚</div><div class="ft">Expert Led Curriculum</div><p class="fd">12 weeks of intensive workshops covering everything from ideation to go-to-market strategy, taught by founders who've done it before.</p><span class="ftag">12 Weeks</span></div>
-      <div class="fc rev"><div class="fi">🤝</div><div class="ft">Mentorship Network</div><p class="fd">Get paired with industry veterans and successful founders who guide you through every challenge, milestone, and pivot point.</p><span class="ftag">1-on-1 Sessions</span></div>
-      <div class="fc rev"><div class="fi">💎</div><div class="ft">Seed Funding</div><p class="fd">Access up to $50,000 in equity-free grant funding to build your MVP and launch. We believe in you before anyone else does.</p><span class="ftag">Up to $50K</span></div>
-      <div class="fc rev"><div class="fi">📈</div><div class="ft">Growth Support</div><p class="fd">Post-program support including investor introductions, PR opportunities, and access to a lifelong alumni founder network.</p><span class="ftag">Lifetime Access</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="impact" style="background:var(--dark2)">
-  <div class="con">
-    <div class="iw">
-      <div>
-        <div class="sl">Our Reach</div>
-        <a href="impact.html" style="text-decoration:none"><h2>Building India's Startup Ecosystem</h2></a>
-        <p class="sd" style="margin-bottom:1.5rem">Our founders are launching from cities across India, driving innovation and creating thousands of jobs nationwide.</p>
-        <div class="gs">
-          <div class="gst rev"><span class="gi">🏙️</span><span class="gt">Cities Active</span><span class="gn">28+</span></div>
-          <div class="gst rev"><span class="gi">🎓</span><span class="gt">Partner Universities</span><span class="gn">120+</span></div>
-          <div class="gst rev"><span class="gi">🌐</span><span class="gt">Countries Expanded To</span><span class="gn">6</span></div>
-          <div class="gst rev"><span class="gi">🏆</span><span class="gt">Awards Won</span><span class="gn">34</span></div>
-        </div>
-        <div style="margin-top:2rem"><a href="impact.html" class="bs">View Impact Report</a></div>
-      </div>
-      <canvas id="gc"></canvas>
-    </div>
-  </div>
-</section>
-
-<section id="testimonials" style="background:var(--dark)">
-  <div class="con" style="margin-bottom:2.5rem;display:flex;justify-content:space-between;align-items:end">
-    <div><div class="sl">Success Stories</div><h2>Real Founders, Real Impact</h2><p class="sd" style="margin-bottom:0">Join hundreds of alumni who have successfully launched and scaled their ventures.</p></div>
-    <a href="stories.html" class="bp">Read All Stories →</a>
-  </div>
-  <div class="tsc"><div class="tt">
-    <div class="tc"><div class="tst">★★★★★</div><p class="tq">"Grapreneur didn't just give me funding; they gave me the confidence and network to turn a college project into a sustainable business employing 15 people."</p><div class="ta"><div class="tav" style="background:linear-gradient(135deg,#7c3aed,#10b981)">SC</div><div><div class="tan">Sarah Chen</div><div class="tar">EcoTech Solutions · $2M Raised</div></div></div></div>
-    <div class="tc"><div class="tst">★★★★★</div><p class="tq">"The mentorship I received was invaluable. My mentor helped me navigate complex supply chain issues that would have otherwise buried my startup completely."</p><div class="ta"><div class="tav" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">MJ</div><div><div class="tan">Marcus Johnson</div><div class="tar">Urban Harvest · 40 Employees</div></div></div></div>
-    <div class="tc"><div class="tst">★★★★★</div><p class="tq">"From the bootcamps to the demo day, every step of the Grapreneur program is designed to accelerate your growth. Best decision I ever made as a student."</p><div class="ta"><div class="tav" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">ER</div><div><div class="tan">Elena Rodriguez</div><div class="tar">EduLearn AI · Series A</div></div></div></div>
-    <div class="tc"><div class="tst">★★★★★</div><p class="tq">"The equity-free funding and connections helped me close my first enterprise deal worth ₹20 lakhs within 6 months of graduation. Absolutely life-changing."</p><div class="ta"><div class="tav" style="background:linear-gradient(135deg,#10b981,#3b82f6)">AP</div><div><div class="tan">Arjun Patel</div><div class="tar">FinStack India · ₹5Cr Revenue</div></div></div></div>
-    <div class="tc"><div class="tst">★★★★★</div><p class="tq">"I went from a rough idea scribbled in my notebook to a funded startup with 3 paying customers — all in 12 weeks. Grapreneur made it possible."</p><div class="ta"><div class="tav" style="background:linear-gradient(135deg,#f59e0b,#8b5cf6)">PK</div><div><div class="tan">Priya Kumar</div><div class="tar">AgriTech Startup · 3 States</div></div></div></div>
-    <div class="tc"><div class="tst">★★★★★</div><p class="tq">"Grapreneur didn't just give me funding; they gave me the confidence and network to turn a college project into a sustainable business employing 15 people."</p><div class="ta"><div class="tav" style="background:linear-gradient(135deg,#7c3aed,#10b981)">SC</div><div><div class="tan">Sarah Chen</div><div class="tar">EcoTech Solutions · $2M Raised</div></div></div></div>
-    <div class="tc"><div class="tst">★★★★★</div><p class="tq">"The mentorship I received was invaluable. My mentor helped me navigate complex supply chain issues that would have otherwise buried my startup completely."</p><div class="ta"><div class="tav" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">MJ</div><div><div class="tan">Marcus Johnson</div><div class="tar">Urban Harvest · 40 Employees</div></div></div></div>
-    <div class="tc"><div class="tst">★★★★★</div><p class="tq">"From the bootcamps to the demo day, every step of the Grapreneur program is designed to accelerate your growth. Best decision I ever made as a student."</p><div class="ta"><div class="tav" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">ER</div><div><div class="tan">Elena Rodriguez</div><div class="tar">EduLearn AI · Series A</div></div></div></div>
-    <div class="tc"><div class="tst">★★★★★</div><p class="tq">"The equity-free funding and connections helped me close my first enterprise deal worth ₹20 lakhs within 6 months of graduation. Absolutely life-changing."</p><div class="ta"><div class="tav" style="background:linear-gradient(135deg,#10b981,#3b82f6)">AP</div><div><div class="tan">Arjun Patel</div><div class="tar">FinStack India · ₹5Cr Revenue</div></div></div></div>
-    <div class="tc"><div class="tst">★★★★★</div><p class="tq">"I went from a rough idea scribbled in my notebook to a funded startup with 3 paying customers — all in 12 weeks. Grapreneur made it possible."</p><div class="ta"><div class="tav" style="background:linear-gradient(135deg,#f59e0b,#8b5cf6)">PK</div><div><div class="tan">Priya Kumar</div><div class="tar">AgriTech Startup · 3 States</div></div></div></div>
-  </div></div>
-</section>
-
-<section id="roadmap" style="background:var(--dark2)">
-  <div class="con">
-    <div class="pg">
-      <div>
-        <div class="sl">The Journey</div><h2>Your 12-Week Transformation</h2>
-        <p class="sd">A structured, mentor-led program taking you from idea to launch — completely free, no equity taken.</p>
-        <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin-top:1rem">
-          <div style="font-size:.78rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem">Program Highlights</div>
-          <div style="display:flex;flex-direction:column;gap:.65rem">
-            <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span style="color:#10b981">✓</span><span style="color:var(--text)">100% Free — No hidden costs</span></div>
-            <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span style="color:#10b981">✓</span><span style="color:var(--text)">Equity-free seed funding</span></div>
-            <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span style="color:#10b981">✓</span><span style="color:var(--text)">1-on-1 founder mentorship</span></div>
-            <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span style="color:#10b981">✓</span><span style="color:var(--text)">Investor network access</span></div>
-            <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span style="color:#10b981">✓</span><span style="color:var(--text)">Certificate of completion</span></div>
+        <div class="hs">
+          <div class="hst">
+            <div class="hsn" id="hn1">0+</div>
+            <div class="hsl">Grads</div>
+          </div>
+          <div class="hdv"></div>
+          <div class="hst">
+            <div class="hsn" id="hn2">$0M+</div>
+            <div class="hsl">Raised</div>
+          </div>
+          <div class="hdv"></div>
+          <div class="hst">
+            <div class="hsn" id="hn3">0%</div>
+            <div class="hsl">Success</div>
           </div>
         </div>
-        <div style="margin-top:2rem"><a href="roadmap.html" class="bs">View Full Roadmap</a></div>
       </div>
-      <div class="ps" id="psteps">
-        <div class="pline"></div>
-        <div class="pstep"><div class="pn">1</div><div class="pb"><div class="ptt">Ideation & Validation</div><div class="pd">Discover your problem space, validate market opportunities, and define your unique value proposition with real customer interviews.</div><span class="pw">Week 1–2</span></div></div>
-        <div class="pstep"><div class="pn">2</div><div class="pb"><div class="ptt">Business Modelling</div><div class="pd">Build a sustainable revenue model, understand unit economics, and master financial fundamentals for early-stage startups.</div><span class="pw">Week 3–5</span></div></div>
-        <div class="pstep"><div class="pn">3</div><div class="pb"><div class="ptt">MVP Development</div><div class="pd">Build your minimum viable product using no-code tools or engineering. Get your first real users and establish feedback loops.</div><span class="pw">Week 6–8</span></div></div>
-        <div class="pstep"><div class="pn">4</div><div class="pb"><div class="ptt">Go-To-Market & Growth</div><div class="pd">Launch with a clear GTM strategy, acquire your first customers, and set up scalable growth channels with expert guidance.</div><span class="pw">Week 9–11</span></div></div>
-        <div class="pstep"><div class="pn">🏆</div><div class="pb"><div class="ptt">Demo Day & Funding</div><div class="pd">Pitch live to investors, receive equity-free grants up to $50,000, and get introduced to our global alumni investor network.</div><span class="pw">Week 12</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="resources" style="background:var(--dark)">
-  <div class="con">
-    <div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:3rem">
-      <div><div class="sl">Resources</div><h2>Recommended Reading</h2></div>
-      <a href="#" class="bs">View All Articles</a>
-    </div>
-    <div class="g-3">
-      <div class="ic rev">
-        <img src="https://picsum.photos/seed/r1/400/250" class="ic-img" alt="Blog">
-        <div class="ic-con">
-          <div class="ic-tag">Guide</div>
-          <div class="ic-ti">The Student's Guide to Validating Ideas Cheaply</div>
-          <p class="ic-desc">You don't need money to test if people want your product. Here are 5 ways to validate for free.</p>
-          <a href="#" class="ic-link">Read Article →</a>
+      <div class="hr2">
+        <div class="hcard rev">
+          <div class="hct">
+            <div class="hci" style="background:linear-gradient(135deg,rgba(124,58,237,.25),rgba(168,85,247,.15))">🚀
+            </div>
+            <div>
+              <div class="hctt">Startups Launched</div>
+              <div class="hcv">This cohort</div>
+            </div>
+            <div style="margin-left:auto;font-weight:800;color:#a78bfa;font-size:1.2rem">150+</div>
+          </div>
+          <div class="hcbar">
+            <div class="hcf" style="width:85%;background:linear-gradient(90deg,#7c3aed,#a78bfa)"></div>
+          </div>
+        </div>
+        <div class="hcard rev">
+          <div class="hct">
+            <div class="hci" style="background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(251,191,36,.1))">💰</div>
+            <div>
+              <div class="hctt">Funding Raised</div>
+              <div class="hcv">Equity-free grants</div>
+            </div>
+            <div style="margin-left:auto;font-weight:800;color:#f59e0b;font-size:1.2rem">$25M</div>
+          </div>
+          <div class="hcbar">
+            <div class="hcf" style="width:72%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div>
+          </div>
+        </div>
+        <div class="hcard rev">
+          <div class="hct">
+            <div class="hci" style="background:linear-gradient(135deg,rgba(16,185,129,.2),rgba(52,211,153,.1))">🌍</div>
+            <div>
+              <div class="hctt">Community Members</div>
+              <div class="hcv">And growing fast</div>
+            </div>
+            <div style="margin-left:auto;font-weight:800;color:#10b981;font-size:1.2rem">5,000+</div>
+          </div>
+          <div class="hcbar">
+            <div class="hcf" style="width:95%;background:linear-gradient(90deg,#10b981,#34d399)"></div>
+          </div>
+        </div>
+        <div class="fbadge">
+          <div class="fbn">$2M 🎉</div>
+          <div class="fbt">Sarah just raised seed!</div>
         </div>
       </div>
-      <div class="ic rev">
-        <img src="https://picsum.photos/seed/r2/400/250" class="ic-img" alt="Blog">
-        <div class="ic-con">
-          <div class="ic-tag">Interview</div>
-          <div class="ic-ti">How to Balance College and a Startup</div>
-          <p class="ic-desc">We interviewed 20 student founders on how they managed attendance, exams, and fundraising.</p>
-          <a href="#" class="ic-link">Read Article →</a>
-        </div>
-      </div>
-      <div class="ic rev">
-        <img src="https://picsum.photos/seed/r3/400/250" class="ic-img" alt="Blog">
-        <div class="ic-con">
-          <div class="ic-tag">Funding</div>
-          <div class="ic-ti">Understanding Term Sheets: A Primer</div>
-          <p class="ic-desc">Don't sign anything until you understand these 3 key clauses in early-stage investment deals.</p>
-          <a href="#" class="ic-link">Read Article →</a>
-        </div>
-      </div>
+    </div>
+  </section>
+
+  <div id="ticker">
+    <div class="tw">
+      <span class="ti">🚀 <span class="tn">150+</span> Startups Launched</span><span class="ts">◆</span>
+      <span class="ti">💼 <span class="tn">1,200+</span> Jobs Created</span><span class="ts">◆</span>
+      <span class="ti">💰 <span class="tn">$25M</span> Funding Raised</span><span class="ts">◆</span>
+      <span class="ti">🌍 <span class="tn">5,000+</span> Community Members</span><span class="ts">◆</span>
+      <span class="ti">🎓 <span class="tn">120+</span> Partner Universities</span><span class="ts">◆</span>
+      <span class="ti">🏙️ <span class="tn">28+</span> Cities Active</span><span class="ts">◆</span>
+      <span class="ti">🏆 <span class="tn">96%</span> Success Rate</span><span class="ts">◆</span>
+      <span class="ti">🚀 <span class="tn">150+</span> Startups Launched</span><span class="ts">◆</span>
+      <span class="ti">💼 <span class="tn">1,200+</span> Jobs Created</span><span class="ts">◆</span>
+      <span class="ti">💰 <span class="tn">$25M</span> Funding Raised</span><span class="ts">◆</span>
+      <span class="ti">🌍 <span class="tn">5,000+</span> Community Members</span><span class="ts">◆</span>
+      <span class="ti">🎓 <span class="tn">120+</span> Partner Universities</span><span class="ts">◆</span>
+      <span class="ti">🏙️ <span class="tn">28+</span> Cities Active</span><span class="ts">◆</span>
+      <span class="ti">🏆 <span class="tn">96%</span> Success Rate</span><span class="ts">◆</span>
     </div>
   </div>
-</section>
 
-<section id="cta" style="background:var(--dark2);position:relative;overflow:hidden">
-  <div class="con"><div class="ci">
-    <div class="sl" style="justify-content:center">Apply Now — It's Free</div>
-    <h2>Ready to Build Your Dream Startup?</h2>
-    <p>Join 5,000+ students who've taken the first step. Applications for Cohort 2026 are open. No fees, no equity, no excuses.</p>
-    <div class="fc2">
-      <div class="fcard rev"><div class="fci">🎓</div><div class="fct">Free Program</div><div class="fcv">₹0</div></div>
-      <div class="fcard rev"><div class="fci">💎</div><div class="fct">Max Funding</div><div class="fcv">$50K</div></div>
-      <div class="fcard rev"><div class="fci">📅</div><div class="fct">Duration</div><div class="fcv">12 Wks</div></div>
+  <section id="metrics">
+    <div class="con">
+      <div style="text-align:center;margin-bottom:3rem">
+        <div class="sl" style="justify-content:center">Our Impact</div>
+        <h2>Numbers That Speak</h2>
+      </div>
+      <div class="mg">
+        <div class="mc rev"><span class="mi">🚀</span><span class="mn" data-t="150" data-s="+">0</span><span
+            class="ml">Startups Launched</span></div>
+        <div class="mc rev"><span class="mi">💼</span><span class="mn" data-t="1200" data-s="+">0</span><span
+            class="ml">Jobs Created</span></div>
+        <div class="mc rev"><span class="mi">💰</span><span class="mn">$25M</span><span class="ml">Funding Raised</span>
+        </div>
+        <div class="mc rev"><span class="mi">🌍</span><span class="mn" data-t="5000" data-s="+">0</span><span
+            class="ml">Community Members</span></div>
+      </div>
     </div>
-    <div class="ef">
-      <input class="ei" id="ei" type="email" placeholder="Enter your college email..."/>
-      <button class="bp" onclick="doSignup()" id="eb" style="white-space:nowrap;cursor:none">Get Started →</button>
+  </section>
+
+  <section id="partners" style="background:var(--dark2);padding:3rem 2rem">
+    <div class="con" style="text-align:center">
+      <div class="sl" style="justify-content:center">Our Ecosystem</div>
+      <h2 style="font-size:1.5rem;margin-bottom:2rem">Supported By Industry Leaders</h2>
+      <div class="part-grid">
+        <div class="part-logo"><span>⚡</span>TechCorp</div>
+        <div class="part-logo"><span>🚀</span>InnovateFund</div>
+        <div class="part-logo"><span>🌐</span>StartupHub</div>
+        <div class="part-logo"><span>🎓</span>EduTech</div>
+      </div>
     </div>
-    <p class="en">🔒 No spam, ever. Unsubscribe anytime.</p>
-  </div></div>
-</section>
+  </section>
 
-<footer>
-  <div class="fg2">
-    <div><div class="flog">Grapreneur</div><p class="ftag2">Empowering the next generation of entrepreneurs to build distinct, sustainable, and impactful businesses across India and beyond.</p></div>
-    <div><div class="fh">Quick Links</div><ul class="ful"><li><a href="program.html">Our Program</a></li><li><a href="stories.html">Success Stories</a></li><li><a href="#">Meet the Team</a></li><li><a href="#">Donate</a></li></ul></div>
-    <div><div class="fh">Resources</div><ul class="ful"><li><a href="#">Student Portal</a></li><li><a href="#">Volunteer</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
-    <div><div class="fh">Contact Us</div><div class="fco"><div>📍 12/1 VV layout, Dr. Rajendraprasad Road,<br>Udumalpet – 642126</div><div>📞 8270661299</div><div>✉️ contact@grapreneur.com</div><div>✉️ support@grapreneur.com</div></div></div>
-  </div>
-  <div class="fb"><span>© 2026 Grapreneur. All rights reserved.</span><span>Made with ❤️ for Student Entrepreneurs in India</span></div>
-</footer>
+  <section id="features" style="background:var(--dark)">
+    <div class="con">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-bottom:3rem">
+        <div>
+          <div class="sl">What We Offer</div>
+          <h2>Everything You Need to Succeed</h2>
+          <p class="sd" style="margin-bottom:0">Our comprehensive program bridges the gap between idea and impact —
+            completely free for students across India.</p>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:flex-end"><a href="program.html" class="bp">View
+            Program Details →</a></div>
+      </div>
+      <div class="fg">
+        <div class="fc rev">
+          <div class="fi">📚</div>
+          <div class="ft">Expert Led Curriculum</div>
+          <p class="fd">12 weeks of intensive workshops covering everything from ideation to go-to-market strategy,
+            taught by founders who've done it before.</p><span class="ftag">12 Weeks</span>
+        </div>
+        <div class="fc rev">
+          <div class="fi">🤝</div>
+          <div class="ft">Mentorship Network</div>
+          <p class="fd">Get paired with industry veterans and successful founders who guide you through every challenge,
+            milestone, and pivot point.</p><span class="ftag">1-on-1 Sessions</span>
+        </div>
+        <div class="fc rev">
+          <div class="fi">💎</div>
+          <div class="ft">Seed Funding</div>
+          <p class="fd">Access up to $50,000 in equity-free grant funding to build your MVP and launch. We believe in
+            you before anyone else does.</p><span class="ftag">Up to $50K</span>
+        </div>
+        <div class="fc rev">
+          <div class="fi">📈</div>
+          <div class="ft">Growth Support</div>
+          <p class="fd">Post-program support including investor introductions, PR opportunities, and access to a
+            lifelong alumni founder network.</p><span class="ftag">Lifetime Access</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script src="main.js"></script>
+  <section id="impact" style="background:var(--dark2)">
+    <div class="con">
+      <div class="iw">
+        <div>
+          <div class="sl">Our Reach</div>
+          <a href="impact.html" style="text-decoration:none">
+            <h2>Building India's Startup Ecosystem</h2>
+          </a>
+          <p class="sd" style="margin-bottom:1.5rem">Our founders are launching from cities across India, driving
+            innovation and creating thousands of jobs nationwide.</p>
+          <div class="gs">
+            <div class="gst rev"><span class="gi">🏙️</span><span class="gt">Cities Active</span><span
+                class="gn">28+</span></div>
+            <div class="gst rev"><span class="gi">🎓</span><span class="gt">Partner Universities</span><span
+                class="gn">120+</span></div>
+            <div class="gst rev"><span class="gi">🌐</span><span class="gt">Countries Expanded To</span><span
+                class="gn">6</span></div>
+            <div class="gst rev"><span class="gi">🏆</span><span class="gt">Awards Won</span><span class="gn">34</span>
+            </div>
+          </div>
+          <div style="margin-top:2rem"><a href="impact.html" class="bs">View Impact Report</a></div>
+        </div>
+        <canvas id="gc"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" style="background:var(--dark)">
+    <div class="con" style="margin-bottom:2.5rem;display:flex;justify-content:space-between;align-items:end">
+      <div>
+        <div class="sl">Success Stories</div>
+        <h2>Real Founders, Real Impact</h2>
+        <p class="sd" style="margin-bottom:0">Join hundreds of alumni who have successfully launched and scaled their
+          ventures.</p>
+      </div>
+      <a href="stories.html" class="bp">Read All Stories →</a>
+    </div>
+    <div class="tsc">
+      <div class="tt">
+        <div class="tc">
+          <div class="tst">★★★★★</div>
+          <p class="tq">"Grapreneur didn't just give me funding; they gave me the confidence and network to turn a
+            college project into a sustainable business employing 15 people."</p>
+          <div class="ta">
+            <div class="tav" style="background:linear-gradient(135deg,#7c3aed,#10b981)">SC</div>
+            <div>
+              <div class="tan">Sarah Chen</div>
+              <div class="tar">EcoTech Solutions · $2M Raised</div>
+            </div>
+          </div>
+        </div>
+        <div class="tc">
+          <div class="tst">★★★★★</div>
+          <p class="tq">"The mentorship I received was invaluable. My mentor helped me navigate complex supply chain
+            issues that would have otherwise buried my startup completely."</p>
+          <div class="ta">
+            <div class="tav" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">MJ</div>
+            <div>
+              <div class="tan">Marcus Johnson</div>
+              <div class="tar">Urban Harvest · 40 Employees</div>
+            </div>
+          </div>
+        </div>
+        <div class="tc">
+          <div class="tst">★★★★★</div>
+          <p class="tq">"From the bootcamps to the demo day, every step of the Grapreneur program is designed to
+            accelerate your growth. Best decision I ever made as a student."</p>
+          <div class="ta">
+            <div class="tav" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">ER</div>
+            <div>
+              <div class="tan">Elena Rodriguez</div>
+              <div class="tar">EduLearn AI · Series A</div>
+            </div>
+          </div>
+        </div>
+        <div class="tc">
+          <div class="tst">★★★★★</div>
+          <p class="tq">"The equity-free funding and connections helped me close my first enterprise deal worth ₹20
+            lakhs within 6 months of graduation. Absolutely life-changing."</p>
+          <div class="ta">
+            <div class="tav" style="background:linear-gradient(135deg,#10b981,#3b82f6)">AP</div>
+            <div>
+              <div class="tan">Arjun Patel</div>
+              <div class="tar">FinStack India · ₹5Cr Revenue</div>
+            </div>
+          </div>
+        </div>
+        <div class="tc">
+          <div class="tst">★★★★★</div>
+          <p class="tq">"I went from a rough idea scribbled in my notebook to a funded startup with 3 paying customers —
+            all in 12 weeks. Grapreneur made it possible."</p>
+          <div class="ta">
+            <div class="tav" style="background:linear-gradient(135deg,#f59e0b,#8b5cf6)">PK</div>
+            <div>
+              <div class="tan">Priya Kumar</div>
+              <div class="tar">AgriTech Startup · 3 States</div>
+            </div>
+          </div>
+        </div>
+        <div class="tc">
+          <div class="tst">★★★★★</div>
+          <p class="tq">"Grapreneur didn't just give me funding; they gave me the confidence and network to turn a
+            college project into a sustainable business employing 15 people."</p>
+          <div class="ta">
+            <div class="tav" style="background:linear-gradient(135deg,#7c3aed,#10b981)">SC</div>
+            <div>
+              <div class="tan">Sarah Chen</div>
+              <div class="tar">EcoTech Solutions · $2M Raised</div>
+            </div>
+          </div>
+        </div>
+        <div class="tc">
+          <div class="tst">★★★★★</div>
+          <p class="tq">"The mentorship I received was invaluable. My mentor helped me navigate complex supply chain
+            issues that would have otherwise buried my startup completely."</p>
+          <div class="ta">
+            <div class="tav" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">MJ</div>
+            <div>
+              <div class="tan">Marcus Johnson</div>
+              <div class="tar">Urban Harvest · 40 Employees</div>
+            </div>
+          </div>
+        </div>
+        <div class="tc">
+          <div class="tst">★★★★★</div>
+          <p class="tq">"From the bootcamps to the demo day, every step of the Grapreneur program is designed to
+            accelerate your growth. Best decision I ever made as a student."</p>
+          <div class="ta">
+            <div class="tav" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">ER</div>
+            <div>
+              <div class="tan">Elena Rodriguez</div>
+              <div class="tar">EduLearn AI · Series A</div>
+            </div>
+          </div>
+        </div>
+        <div class="tc">
+          <div class="tst">★★★★★</div>
+          <p class="tq">"The equity-free funding and connections helped me close my first enterprise deal worth ₹20
+            lakhs within 6 months of graduation. Absolutely life-changing."</p>
+          <div class="ta">
+            <div class="tav" style="background:linear-gradient(135deg,#10b981,#3b82f6)">AP</div>
+            <div>
+              <div class="tan">Arjun Patel</div>
+              <div class="tar">FinStack India · ₹5Cr Revenue</div>
+            </div>
+          </div>
+        </div>
+        <div class="tc">
+          <div class="tst">★★★★★</div>
+          <p class="tq">"I went from a rough idea scribbled in my notebook to a funded startup with 3 paying customers —
+            all in 12 weeks. Grapreneur made it possible."</p>
+          <div class="ta">
+            <div class="tav" style="background:linear-gradient(135deg,#f59e0b,#8b5cf6)">PK</div>
+            <div>
+              <div class="tan">Priya Kumar</div>
+              <div class="tar">AgriTech Startup · 3 States</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="roadmap" style="background:var(--dark2)">
+    <div class="con">
+      <div class="pg">
+        <div>
+          <div class="sl">The Journey</div>
+          <h2>Your 12-Week Transformation</h2>
+          <p class="sd">A structured, mentor-led program taking you from idea to launch — completely free, no equity
+            taken.</p>
+          <div
+            style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin-top:1rem">
+            <div
+              style="font-size:.78rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem">
+              Program Highlights</div>
+            <div style="display:flex;flex-direction:column;gap:.65rem">
+              <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span
+                  style="color:#10b981">✓</span><span style="color:var(--text)">100% Free — No hidden costs</span></div>
+              <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span
+                  style="color:#10b981">✓</span><span style="color:var(--text)">Equity-free seed funding</span></div>
+              <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span
+                  style="color:#10b981">✓</span><span style="color:var(--text)">1-on-1 founder mentorship</span></div>
+              <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span
+                  style="color:#10b981">✓</span><span style="color:var(--text)">Investor network access</span></div>
+              <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span
+                  style="color:#10b981">✓</span><span style="color:var(--text)">Certificate of completion</span></div>
+            </div>
+          </div>
+          <div style="margin-top:2rem"><a href="roadmap.html" class="bs">View Full Roadmap</a></div>
+        </div>
+        <div class="ps" id="psteps">
+          <div class="pline"></div>
+          <div class="pstep">
+            <div class="pn">1</div>
+            <div class="pb">
+              <div class="ptt">Ideation & Validation</div>
+              <div class="pd">Discover your problem space, validate market opportunities, and define your unique value
+                proposition with real customer interviews.</div><span class="pw">Week 1–2</span>
+            </div>
+          </div>
+          <div class="pstep">
+            <div class="pn">2</div>
+            <div class="pb">
+              <div class="ptt">Business Modelling</div>
+              <div class="pd">Build a sustainable revenue model, understand unit economics, and master financial
+                fundamentals for early-stage startups.</div><span class="pw">Week 3–5</span>
+            </div>
+          </div>
+          <div class="pstep">
+            <div class="pn">3</div>
+            <div class="pb">
+              <div class="ptt">MVP Development</div>
+              <div class="pd">Build your minimum viable product using no-code tools or engineering. Get your first real
+                users and establish feedback loops.</div><span class="pw">Week 6–8</span>
+            </div>
+          </div>
+          <div class="pstep">
+            <div class="pn">4</div>
+            <div class="pb">
+              <div class="ptt">Go-To-Market & Growth</div>
+              <div class="pd">Launch with a clear GTM strategy, acquire your first customers, and set up scalable growth
+                channels with expert guidance.</div><span class="pw">Week 9–11</span>
+            </div>
+          </div>
+          <div class="pstep">
+            <div class="pn">🏆</div>
+            <div class="pb">
+              <div class="ptt">Demo Day & Funding</div>
+              <div class="pd">Pitch live to investors, receive equity-free grants up to $50,000, and get introduced to
+                our global alumni investor network.</div><span class="pw">Week 12</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" style="background:var(--dark)">
+    <div class="con">
+      <div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:3rem">
+        <div>
+          <div class="sl">Resources</div>
+          <h2>Recommended Reading</h2>
+        </div>
+        <a href="#" class="bs">View All Articles</a>
+      </div>
+      <div class="g-3">
+        <div class="ic rev">
+          <img src="https://picsum.photos/seed/r1/400/250" class="ic-img" alt="Blog">
+          <div class="ic-con">
+            <div class="ic-tag">Guide</div>
+            <div class="ic-ti">The Student's Guide to Validating Ideas Cheaply</div>
+            <p class="ic-desc">You don't need money to test if people want your product. Here are 5 ways to validate for
+              free.</p>
+            <a href="#" class="ic-link">Read Article →</a>
+          </div>
+        </div>
+        <div class="ic rev">
+          <img src="https://picsum.photos/seed/r2/400/250" class="ic-img" alt="Blog">
+          <div class="ic-con">
+            <div class="ic-tag">Interview</div>
+            <div class="ic-ti">How to Balance College and a Startup</div>
+            <p class="ic-desc">We interviewed 20 student founders on how they managed attendance, exams, and
+              fundraising.</p>
+            <a href="#" class="ic-link">Read Article →</a>
+          </div>
+        </div>
+        <div class="ic rev">
+          <img src="https://picsum.photos/seed/r3/400/250" class="ic-img" alt="Blog">
+          <div class="ic-con">
+            <div class="ic-tag">Funding</div>
+            <div class="ic-ti">Understanding Term Sheets: A Primer</div>
+            <p class="ic-desc">Don't sign anything until you understand these 3 key clauses in early-stage investment
+              deals.</p>
+            <a href="#" class="ic-link">Read Article →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta" style="background:var(--dark2);position:relative;overflow:hidden">
+    <div class="con">
+      <div class="ci">
+        <div class="sl" style="justify-content:center">Apply Now — It's Free</div>
+        <h2>Ready to Build Your Dream Startup?</h2>
+        <p>Join 5,000+ students who've taken the first step. Applications for Cohort 2026 are open. No fees, no equity,
+          no excuses.</p>
+        <div class="fc2">
+          <div class="fcard rev">
+            <div class="fci">🎓</div>
+            <div class="fct">Free Program</div>
+            <div class="fcv">₹0</div>
+          </div>
+          <div class="fcard rev">
+            <div class="fci">💎</div>
+            <div class="fct">Max Funding</div>
+            <div class="fcv">$50K</div>
+          </div>
+          <div class="fcard rev">
+            <div class="fci">📅</div>
+            <div class="fct">Duration</div>
+            <div class="fcv">12 Wks</div>
+          </div>
+        </div>
+        <div class="ef">
+          <input class="ei" id="ei" type="email" placeholder="Enter your college email..." />
+          <button class="bp" onclick="doSignup()" id="eb" style="white-space:nowrap;cursor:none">Get Started →</button>
+        </div>
+        <p class="en">🔒 No spam, ever. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fg2">
+      <div>
+        <div class="flog">Grapreneur</div>
+        <p class="ftag2">Empowering the next generation of entrepreneurs to build distinct, sustainable, and impactful
+          businesses across India and beyond.</p>
+      </div>
+      <div>
+        <div class="fh">Quick Links</div>
+        <ul class="ful">
+          <li><a href="program.html">Our Program</a></li>
+          <li><a href="stories.html">Success Stories</a></li>
+          <li><a href="#">Meet the Team</a></li>
+          <li><a href="#">Donate</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">Resources</div>
+        <ul class="ful">
+          <li><a href="#">Student Portal</a></li>
+          <li><a href="#">Volunteer</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">Contact Us</div>
+        <div class="fco">
+          <div>📍 12/1 VV layout, Dr. Rajendraprasad Road,<br>Udumalpet – 642126</div>
+          <div>📞 8270661299</div>
+          <div>✉️ contact@grapreneur.com</div>
+          <div>✉️ support@grapreneur.com</div>
+        </div>
+      </div>
+    </div>
+    <div class="fb"><span>© 2026 Grapreneur. All rights reserved.</span><span>Made with ❤️ for Student Entrepreneurs in
+        India</span></div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
+
 </html>

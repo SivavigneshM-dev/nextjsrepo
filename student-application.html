@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Student Application | Grapreneur</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="ll">Grapreneur</div>
+        <div class="lb">
+            <div class="lf"></div>
+        </div>
+    </div>
+    <div id="cur"></div>
+    <div id="cur2"></div>
+
+    <nav id="nav">
+        <div class="logo">Grapreneur</div>
+        <ul class="nl" id="nl">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="apply.html">Apply</a></li>
+        </ul>
+        <a href="apply.html" class="ncta">Join Community</a>
+        <button class="hbg" onclick="document.getElementById('nl').classList.toggle('open')">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <section class="form-section">
+        <div class="con">
+            <div class="form-header rev">
+                <div class="sl">Apply</div>
+                <h2>Student Portal</h2>
+                <p class="sd" style="margin:0 auto">Take the first step towards building your dream startup.</p>
+            </div>
+
+            <form class="form-card rev" id="appForm">
+                <div class="form-grid-2">
+                    <div class="inp-grp">
+                        <label class="inp-lbl">First Name <span class="req">*</span></label>
+                        <input type="text" name="First Name" class="inp-field" placeholder="Rahul">
+                    </div>
+                    <div class="inp-grp">
+                        <label class="inp-lbl">Last Name <span class="req">*</span></label>
+                        <input type="text" name="Last Name" class="inp-field" placeholder="Sharma">
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="inp-grp">
+                        <label class="inp-lbl">Email Address <span class="req">*</span></label>
+                        <input type="email" name="Email Address" class="inp-field" placeholder="rahul@college.edu">
+                    </div>
+                    <div class="inp-grp">
+                        <label class="inp-lbl">Phone Number <span class="req">*</span></label>
+                        <input type="tel" name="Phone Number" class="inp-field" placeholder="+91 98765 43210">
+                    </div>
+                </div>
+
+                <div class="inp-grp">
+                    <label class="inp-lbl">College / University <span class="req">*</span></label>
+                    <input type="text" name="College / University" class="inp-field" placeholder="e.g. IIT Delhi">
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="inp-grp">
+                        <label class="inp-lbl">Course / Degree <span class="req">*</span></label>
+                        <input type="text" name="Course / Degree" class="inp-field"
+                            placeholder="e.g. B.Tech Computer Science">
+                    </div>
+                    <div class="inp-grp">
+                        <label class="inp-lbl">Year of Study <span class="req">*</span></label>
+                        <select name="Year of Study" class="inp-field">
+                            <option value="" disabled selected>Select Year</option>
+                            <option>1st Year</option>
+                            <option>2nd Year</option>
+                            <option>3rd Year</option>
+                            <option>4th Year</option>
+                            <option>Graduate</option>
+                            <option>Post Graduate</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="inp-grp"><label class="inp-lbl">Startup Idea / Business Concept</label><textarea
+                        name="Startup Idea / Business Concept" class="inp-field inp-area"
+                        placeholder="Briefly describe your idea..."></textarea></div>
+
+                <div class="inp-grp">
+                    <label class="inp-lbl">Business Category</label>
+                    <select name="Business Category" class="inp-field">
+                        <option value="" disabled selected>Select Category</option>
+                        <option>Technology</option>
+                        <option>Health</option>
+                        <option>Education</option>
+                        <option>Fin-Tech</option>
+                        <option>E-commerce</option>
+                        <option>Agriculture</option>
+                        <option>Sustainability</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="inp-grp"><label class="inp-lbl">City <span class="req">*</span></label><input
+                            name="City" type="text" class="inp-field"></div>
+                    <div class="inp-grp"><label class="inp-lbl">State <span class="req">*</span></label><input
+                            name="State" type="text" class="inp-field"></div>
+                </div>
+
+                <div class="inp-grp">
+                    <label class="inp-lbl">Current Stage of Your Idea</label>
+                    <select name="Current Stage of Your Idea" class="inp-field">
+                        <option>Just an Idea / Concept</option>
+                        <option>Doing Market Research</option>
+                        <option>Building Prototype</option>
+                        <option>Testing With Users</option>
+                    </select>
+                </div>
+
+                <div class="inp-grp"><label class="inp-lbl">Why do you want to Join Grapreneur?</label><textarea
+                        name="Why do you want to Join Grapreneur?" class="inp-field inp-area"></textarea></div>
+
+                <label class="chk-grp"><input type="checkbox" name="Terms Agreement" class="chk-inp" value="Agreed"> I
+                    agree to the terms and conditions and
+                    privacy policy <span class="req">*</span></label>
+                <label class="chk-grp"><input type="checkbox" name="Newsletter" class="chk-inp" value="Subscribed"
+                        checked> Subscribe to our newsletter for
+                    updates and resources</label>
+
+                <button class="bp" id="submitBtn" style="width:100%;margin-top:1rem">Submit Application</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="fb"><span>© 2026 Grapreneur. All rights reserved.</span></div>
+    </footer>
+    <script src="main.js"></script>
+    <script>
+        // PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyyCkD-iIdH32RMwbGkVrI7W6BijkYHnLt1AJcHP5KDkyaC2szbDjzNkaPJVOXoB5xXhA/exec';
+
+        document.getElementById('submitBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            const form = document.getElementById('appForm');
+            let valid = true;
+
+            // Reset previous error styles
+            form.querySelectorAll('.inp-field').forEach(el => el.style.borderColor = '');
+            form.querySelectorAll('.chk-grp').forEach(el => el.style.color = '');
+
+            // Validate Text/Select Inputs
+            form.querySelectorAll('.inp-grp').forEach(group => {
+                if (group.querySelector('.req')) {
+                    const input = group.querySelector('.inp-field');
+                    if (input && !input.value.trim()) {
+                        input.style.borderColor = '#ef4444';
+                        valid = false;
+                    }
+                }
+            });
+
+            // Validate Checkboxes
+            form.querySelectorAll('.chk-grp').forEach(chk => {
+                if (chk.querySelector('.req') && !chk.querySelector('input').checked) {
+                    chk.style.color = '#ef4444';
+                    valid = false;
+                }
+            });
+
+            if (valid) {
+                const btn = document.getElementById('submitBtn');
+                btn.disabled = true;
+                btn.innerText = 'Submitting...';
+
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        return response.json(); // Parse the JSON returned by the script
+                    })
+                    .then(data => {
+                        if (data.result === 'success') {
+                            setTimeout(() => {
+                                form.innerHTML = '<div style="text-align:center;padding:2rem"><div style="font-size:3rem;margin-bottom:1rem">🎉</div><h3 style="font-size:1.5rem;color:#fff;margin-bottom:0.5rem">Application Submitted!</h3><p style="color:var(--muted)">Thank you for applying. We will get back to you shortly.</p><a href="index.html" class="bp" style="margin-top:1.5rem">Back to Home</a></div>';
+                                form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }, 3000);
+                        } else {
+                            throw new Error(data.message || 'Script Error');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        btn.innerText = 'Error! Try Again';
+                        btn.disabled = false;
+                    });
+            }
+        });
+    </script>
+</body>
+
+</html>
