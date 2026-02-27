@@ -411,7 +411,7 @@ stb.innerHTML = "↑";
 Object.assign(stb.style, {
   position: "fixed",
   bottom: "30px",
-  left: "30px",
+  right: "30px",
   width: "50px",
   height: "50px",
   background: "#7c3aed",
@@ -419,6 +419,7 @@ Object.assign(stb.style, {
   border: 0,
   borderRadius: "50%",
   fontSize: "24px",
+  fontWeight: "bold",
   cursor: "pointer",
   zIndex: 999,
   opacity: 0,
