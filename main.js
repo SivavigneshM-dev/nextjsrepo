@@ -204,6 +204,10 @@ if (document.getElementById("gc")) {
     });
     r.setPixelRatio(Math.min(devicePixelRatio, 2));
     r.setSize(cv.offsetWidth, cv.offsetHeight);
+    const earthGroup = new THREE.Group();
+    const dotsGroup = new THREE.Group();
+    sc.add(earthGroup);
+    sc.add(dotsGroup);
     const core = new THREE.Mesh(
       new THREE.SphereGeometry(2, 64, 64),
       new THREE.MeshPhongMaterial({
@@ -213,8 +217,8 @@ if (document.getElementById("gc")) {
         shininess: 50,
       }),
     );
-    sc.add(core);
-    sc.add(
+    earthGroup.add(core);
+    earthGroup.add(
       new THREE.Mesh(
         new THREE.SphereGeometry(2.02, 24, 24),
         new THREE.MeshBasicMaterial({
@@ -225,7 +229,7 @@ if (document.getElementById("gc")) {
         }),
       ),
     );
-    sc.add(
+    earthGroup.add(
       new THREE.Mesh(
         new THREE.SphereGeometry(2.25, 32, 32),
         new THREE.MeshBasicMaterial({
@@ -260,7 +264,7 @@ if (document.getElementById("gc")) {
         new THREE.MeshBasicMaterial({ color: 0xf59e0b }),
       );
       d.position.set((x / l) * 2.07, (y / l) * 2.07, (z / l) * 2.07);
-      sc.add(d);
+      dotsGroup.add(d);
     });
     sc.add(new THREE.AmbientLight(0x112244, 1.2));
     const dl = new THREE.DirectionalLight(0x7c3aed, 1.8);
@@ -305,14 +309,19 @@ if (document.getElementById("gc")) {
       },
       { passive: true },
     );
+    let gRot = 0, dRot = 0;
     (function anim() {
       requestAnimationFrame(anim);
       if (!drag) {
         vx *= 0.94;
-        vx += 0.004;
       }
       ry += vx;
-      core.rotation.y = ry;
+      
+      gRot += 0.001; // Slow globe rotation
+      dRot -= 0.0035; // Faster dots rotation (approx 30s per revolution) opposite direction
+      
+      earthGroup.rotation.y = ry + gRot;
+      dotsGroup.rotation.y = ry + dRot;
       r.render(sc, cam);
     })();
     window.addEventListener("resize", () => {
