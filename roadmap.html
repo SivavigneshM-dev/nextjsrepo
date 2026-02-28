@@ -1,61 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Roadmap | Grapreneur</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Roadmap | Grapreneur</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div id="loader"><div class="ll">Grapreneur</div><div class="lb"><div class="lf"></div></div></div>
-<div id="cur"></div><div id="cur2"></div>
+  <div id="loader">
+    <div class="ll">Grapreneur</div>
+    <div class="lb">
+      <div class="lf"></div>
+    </div>
+  </div>
+  <div id="cur"></div>
+  <div id="cur2"></div>
 
-<nav id="nav">
-  <div class="logo">Grapreneur</div>
-  <ul class="nl" id="nl">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="program.html">Program</a></li>
-    <li><a href="impact.html">Impact</a></li>
-    <li><a href="stories.html">Stories</a></li>
-    <li><a href="roadmap.html">Roadmap</a></li>
-  </ul>
-  <a href="join-community.html" class="ncta">Join Community</a>
-  <button class="hbg" onclick="document.getElementById('nl').classList.toggle('open')">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+  <nav id="nav">
+    <div class="logo">Grapreneur</div>
+    <ul class="nl" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="program.html">Program</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="roadmap.html">Roadmap</a></li>
+    </ul>
+    <a href="join-community.html" class="ncta">Join Community</a>
+    <button class="hbg" onclick="document.getElementById('nl').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-<section id="program" style="padding-top:8rem">
-  <div class="con">
-    <div class="pg">
-      <div>
-        <div class="sl">The Journey</div><h2>Your 4‑Week Transformation</h2>
-        <p class="sd">A structured, mentor-led program taking you from idea to launch — completely free, no equity taken.</p>
-        <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin-top:1rem">
-          <div style="font-size:.78rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem">Program Highlights</div>
-          <div style="display:flex;flex-direction:column;gap:.65rem">
-            <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span style="color:#10b981">✓</span><span style="color:var(--text)">100% Free — No hidden costs</span></div>
-            <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span style="color:#10b981">✓</span><span style="color:var(--text)">Equity-free seed funding</span></div>
-            <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span style="color:#10b981">✓</span><span style="color:var(--text)">1-on-1 founder mentorship</span></div>
-            <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span style="color:#10b981">✓</span><span style="color:var(--text)">Investor network access</span></div>
-            <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span style="color:#10b981">✓</span><span style="color:var(--text)">Certificate of completion</span></div>
+  <section id="program" style="padding-top:8rem">
+    <div class="con">
+      <div class="pg">
+        <div>
+          <div class="sl">The Journey</div>
+          <h2>Your 4‑Week Transformation</h2>
+          <p class="sd">A structured, mentor-led program taking you from idea to launch — completely free, no equity
+            taken.</p>
+          <div
+            style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin-top:1rem">
+            <div
+              style="font-size:.78rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem">
+              Program Highlights</div>
+            <div style="display:flex;flex-direction:column;gap:.65rem">
+              <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span
+                  style="color:#10b981">✓</span><span style="color:var(--text)">100% Free — No hidden costs</span></div>
+              <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span
+                  style="color:#10b981">✓</span><span style="color:var(--text)">Startup ecosystem access</span></div>
+              <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span
+                  style="color:#10b981">✓</span><span style="color:var(--text)">1-on-1 founder mentorship</span></div>
+              <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span
+                  style="color:#10b981">✓</span><span style="color:var(--text)">Growth guidance support</span></div>
+              <div style="display:flex;align-items:center;gap:.65rem;font-size:.85rem"><span
+                  style="color:#10b981">✓</span><span style="color:var(--text)">Certificate of completion</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="ps" id="psteps">
+          <div class="pline"></div>
+          <div class="pstep">
+            <div class="pn">1</div>
+            <div class="pb">
+              <div class="ptt">Ideation & Validation</div>
+              <div class="pd">Discover your problem space, validate market opportunities, and define your unique value
+                proposition with real customer interviews.</div><span class="pw">1st Week</span>
+              <div class="p-del">
+                <div class="p-li">Problem Statement Document</div>
+                <div class="p-li">Customer Interview Insights</div>
+              </div>
+            </div>
+          </div>
+          <div class="pstep">
+            <div class="pn">2</div>
+            <div class="pb">
+              <div class="ptt">Business Modelling</div>
+              <div class="pd">Build a sustainable revenue model, understand unit economics, and master financial
+                fundamentals for early-stage startups.</div><span class="pw">2nd Week</span>
+              <div class="p-del">
+                <div class="p-li">Revenue Model Draft</div>
+                <div class="p-li">Cost Structure Plan</div>
+              </div>
+            </div>
+          </div>
+          <div class="pstep">
+            <div class="pn">3</div>
+            <div class="pb">
+              <div class="ptt">MVP Development</div>
+              <div class="pd">Build your minimum viable product using no-code tools or engineering. Get your first real
+                users and establish feedback loops.</div><span class="pw">3rd Week</span>
+              <div class="p-del">
+                <div class="p-li">Prototype or MVP</div>
+                <div class="p-li">Early User Feedback Report</div>
+              </div>
+            </div>
+          </div>
+          <div class="pstep">
+            <div class="pn">4</div>
+            <div class="pb">
+              <div class="ptt">Go-To-Market & Growth</div>
+              <div class="pd">Launch with a clear GTM strategy, acquire your first customers, and set up scalable growth
+                channels with expert guidance.</div><span class="pw">4th Week</span>
+              <div class="p-del">
+                <div class="p-li">Launch Plan</div>
+                <div class="p-li">Customer Acquisition Roadmap</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="ps" id="psteps">
-        <div class="pline"></div>
-        <div class="pstep"><div class="pn">1</div><div class="pb"><div class="ptt">Ideation & Validation</div><div class="pd">Discover your problem space, validate market opportunities, and define your unique value proposition with real customer interviews.</div><span class="pw">1st Week</span></div></div>
-        <div class="pstep"><div class="pn">2</div><div class="pb"><div class="ptt">Business Modelling</div><div class="pd">Build a sustainable revenue model, understand unit economics, and master financial fundamentals for early-stage startups.</div><span class="pw">2nd Week</span></div></div>
-        <div class="pstep"><div class="pn">3</div><div class="pb"><div class="ptt">MVP Development</div><div class="pd">Build your minimum viable product using no-code tools or engineering. Get your first real users and establish feedback loops.</div><span class="pw">3rd Week</span></div></div>
-        <div class="pstep"><div class="pn">4</div><div class="pb"><div class="ptt">Go-To-Market & Growth</div><div class="pd">Launch with a clear GTM strategy, acquire your first customers, and set up scalable growth channels with expert guidance.</div><span class="pw">4th Week</span></div></div>
+      <p class="sd" style="margin-top:2rem;font-size:0.9rem;opacity:0.7">Average cohort onboarding cycle: 7–10 days from
+        application to confirmation.</p>
+    </div>
+  </section>
+
+  <!-- Who This Roadmap Is Designed For -->
+  <section id="roadmap-target" style="background:var(--dark)">
+    <div class="con">
+      <div class="sl">Target Audience</div>
+      <h2>Who This Roadmap Is Designed For</h2>
+      <div class="g-4" style="margin-top:3rem">
+        <div class="fc rev">
+          <div class="ft">College Students</div>
+          <p class="fd">With startup ideas looking for direction.</p>
+        </div>
+        <div class="fc rev">
+          <div class="ft">Early-Stage Founders</div>
+          <p class="fd">Based in Tamil Nadu seeking validation.</p>
+        </div>
+        <div class="fc rev">
+          <div class="ft">Technical Builders</div>
+          <p class="fd">Engineers needing business strategy.</p>
+        </div>
+        <div class="fc rev">
+          <div class="ft">Campus Innovation Teams</div>
+          <p class="fd">Groups working on final year projects.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer><div class="fb" style="justify-content:center"><span>© 2026 Grapreneur. All rights reserved.</span></div></footer>
-<script src="main.js"></script>
+  <!-- Measurable Outcomes -->
+  <section id="roadmap-outcomes" style="background:var(--dark2)">
+    <div class="con">
+      <div class="sl">Outcomes</div>
+      <h2>What You Achieve in 4 Weeks</h2>
+      <div class="g-4" style="margin-top:3rem">
+        <div class="gst rev"><span class="gi">💡</span><span class="gt">Validated Startup Concept</span></div>
+        <div class="gst rev"><span class="gi">📊</span><span class="gt">Structured Business Model</span></div>
+        <div class="gst rev"><span class="gi">⚙️</span><span class="gt">Working MVP or Prototype</span></div>
+        <div class="gst rev"><span class="gi">🚀</span><span class="gt">Launch-Ready GTM Plan</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" style="background:var(--dark)">
+    <div class="con">
+      <div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:3rem">
+        <div>
+          <div class="sl">Learning Path</div>
+          <h2>Preparation Resources</h2>
+          <p class="sd" style="margin-bottom:0">Prepare before starting to maximize your transformation journey.</p>
+        </div>
+        <a href="#" class="bs">Explore Library</a>
+      </div>
+      <div class="g-3">
+        <div class="ic rev">
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800" class="ic-img"
+            alt="Checklist">
+          <div class="ic-con">
+            <div class="ic-tag">Guide</div>
+            <div class="ic-ti">The Pre-Incubation Checklist</div>
+            <p class="ic-desc">Everything you need to prepare before starting your 4-week journey with Grapreneur.</p>
+            <a href="#" class="ic-link">Read Guide →</a>
+          </div>
+        </div>
+        <div class="ic rev">
+          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800" class="ic-img" alt="No-Code">
+          <div class="ic-con">
+            <div class="ic-tag">Tools</div>
+            <div class="ic-ti">No-Code for TN Founders</div>
+            <p class="ic-desc">Build your MVP without writing a single line of code using these recommended platforms.
+            </p>
+            <a href="#" class="ic-link">View Tools →</a>
+          </div>
+        </div>
+        <div class="ic rev">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800" class="ic-img"
+            alt="Marketing">
+          <div class="ic-con">
+            <div class="ic-tag">Strategy</div>
+            <div class="ic-ti">Mastering Vernacular Marketing</div>
+            <p class="ic-desc">How to reach the next billion users by leveraging Tamil language and local culture.</p>
+            <a href="#" class="ic-link">Read Strategy →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section id="roadmap-cta" style="background:var(--dark2);text-align:center">
+    <div class="con">
+      <div class="sl" style="justify-content:center">Start Now</div>
+      <h2>Ready to Begin Your 4-Week Transformation?</h2>
+      <p class="sd" style="margin:0 auto 2.5rem">Join the movement of student founders building real startups across
+        Tamil Nadu.</p>
+      <a href="join-community.html" class="bp">Join the Cohort</a>
+      <div style="margin-top:1rem;font-size:0.8rem;color:var(--muted)">Limited cohort seats.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fb" style="justify-content:center"><span>© 2026 Grapreneur. All rights reserved.</span></div>
+  </footer>
+  <script src="main.js"></script>
 </body>
+
 </html>
