@@ -1,8 +1,19 @@
+// FAVICON
+(function () {
+  let link = document.querySelector("link[rel~='icon']");
+  if (!link) {
+    link = document.createElement("link");
+    link.rel = "icon";
+    document.head.appendChild(link);
+  }
+  link.href = "icon Grapinz.png";
+})();
+
 // LOADER
 window.addEventListener("load", () =>
   setTimeout(
     () => document.getElementById("loader").classList.add("gone"),
-    1900,
+    500,
   ),
 );
 
@@ -57,8 +68,8 @@ window.addEventListener("scroll", () =>
 if (document.getElementById("hc")) {
   (function () {
     const cv = document.getElementById("hc");
-    cv.width = innerWidth;
-    cv.height = innerHeight;
+    cv.width = cv.offsetWidth || innerWidth;
+    cv.height = cv.offsetHeight || innerHeight;
     const sc = new THREE.Scene(),
       cam = new THREE.PerspectiveCamera(60, cv.width / cv.height, 0.1, 1000);
     cam.position.set(0, 0, 30);
@@ -163,11 +174,13 @@ if (document.getElementById("hc")) {
       r.render(sc, cam);
     })();
     window.addEventListener("resize", () => {
-      cv.width = innerWidth;
-      cv.height = innerHeight;
-      cam.aspect = innerWidth / innerHeight;
+      const w = cv.offsetWidth || innerWidth;
+      const h = cv.offsetHeight || innerHeight;
+      cv.width = w;
+      cv.height = h;
+      cam.aspect = w / h;
       cam.updateProjectionMatrix();
-      r.setSize(innerWidth, innerHeight);
+      r.setSize(w, h);
     });
   })();
 }
@@ -327,10 +340,13 @@ function countTo(el, target, suffix, prefix, dur) {
 }
 if (document.getElementById("hn1")) {
   setTimeout(() => {
-    countTo(document.getElementById("hn1"), 500, "+", "", 1800);
-    countTo(document.getElementById("hn2"), 10, "M+", "$", 1800);
-    countTo(document.getElementById("hn3"), 96, "%", "", 1800);
-  }, 2000);
+    const h1 = document.getElementById("hn1");
+    if (h1) countTo(h1, 500, "+", "", 1800);
+    const h2 = document.getElementById("hn2");
+    if (h2) countTo(h2, 50, "+", "", 1800);
+    const h3 = document.getElementById("hn3");
+    if (h3) countTo(h3, 96, "%", "", 1800);
+  }, 600);
 }
 
 // SCROLL REVEAL
