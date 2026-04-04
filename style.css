@@ -1923,92 +1923,57 @@ select.inp-field option {
 }
 
 @media (max-width: 480px) {
-  .fg2 {
-    display: grid !important;
-    grid-template-columns: 1fr !important; /* Brand section full width on top */
-    gap: 1.5rem !important;
-    text-align: center;
-  }
 
-  /* Brand/logo section — full width on top */
-  .fg2 > div:first-child {
-    grid-column: span 1;
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-
-  /* Quick Links + Social Media + Contact Us — 3 equal columns */
-  .fg2 > div:not(:first-child) {
-    display: contents; /* Let children participate in parent grid */
-  }
-
-  /* Re-layout the last 3 divs as a 3-column row */
-  .fg2 {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* Target the 3-column wrapper specifically */
-  footer .fg2 {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  footer .fg2 > div:first-child {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  /* The 3 columns row */
-  footer .fg2 > div:nth-child(2),
-  footer .fg2 > div:nth-child(3),
-  footer .fg2 > div:nth-child(4) {
-    display: block;
-  }
-
-  /* Wrap those 3 into a flex row using a pseudo trick — 
-     we target all 3 together via adjacent sibling flow */
   footer .fg2 {
     display: grid !important;
-    grid-template-columns: 1fr !important;
-    grid-template-rows: auto auto !important;
-  }
-
-  footer .fg2 > div:first-child {
-    grid-column: 1 / -1;
-    text-align: center;
-  }
-
-  /* Create a sub-row for the 3 link/contact columns */
-  footer .fg2 > div:nth-child(2) { grid-column: 1; }
-  footer .fg2 > div:nth-child(3) { grid-column: 2; }
-  footer .fg2 > div:nth-child(4) { grid-column: 3; }
-
-  footer .fg2 {
     grid-template-columns: 1fr 1fr 1.4fr !important;
+    grid-template-rows: auto auto !important;
+    gap: 1.5rem 0.5rem !important;
+    text-align: left !important; /* ← everything left by default */
   }
 
-  /* Override: first child spans all 3 columns */
+  /* Brand/logo — full width, left aligned */
   footer .fg2 > div:first-child {
     grid-column: 1 / -1 !important;
+    text-align: left !important;
+    margin-bottom: 0.25rem;
   }
+
+  /* Brand tagline */
+  .ftag2 {
+    text-align: left !important;
+  }
+
+  /* 3 columns positioning */
+  footer .fg2 > div:nth-child(2) { grid-column: 1; text-align: left !important; }
+  footer .fg2 > div:nth-child(3) { grid-column: 2; text-align: left !important; }
+  footer .fg2 > div:nth-child(4) { grid-column: 3; text-align: left !important; }
 
   /* Section headings */
   .fh {
     font-size: 0.62rem !important;
     letter-spacing: 0.05em !important;
     margin-bottom: 0.6rem !important;
+    text-align: left !important;
   }
 
-  /* Link items */
+  /* Links */
+  .ful {
+    text-align: left !important;
+  }
+
   .ful a {
     font-size: 0.72rem !important;
     line-height: 1.8 !important;
+    text-align: left !important;
+    display: block;
   }
 
-  /* Contact info text */
+  /* Contact info */
   .fco {
     font-size: 0.68rem !important;
     line-height: 1.7 !important;
+    text-align: left !important;
   }
 
   /* Footer bottom bar */
